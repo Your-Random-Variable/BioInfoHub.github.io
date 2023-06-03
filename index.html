@@ -85,45 +85,20 @@
         <button type="submit">Submit</button>
       </form>
       <div id="queries-container">
-        <!-- Backend server code here to fetch and display forum queries and replies -->
+        <!-- Forum queries and replies will be dynamically added here using JavaScript -->
       </div>
     </section>
-<section id="news" style="display: none;">
+    
+    <section id="news" style="display: none;">
       <!-- News section content goes here -->
-      <h2>News</h2>
-      <div class="news-container">
-        <div class="news-item">
-          <h3>SNIPR Biome Announces Preclinical Research on CRISPR-armed Phage Therapeutic</h3>
-          <p>SNIPR Biome ApS has announced preclinical research on SNIPR001, a CRISPR-armed phage therapeutic that can specifically target and remove E. coli in the human gut. The company believes that SNIPR001 could be a potential treatment for a variety of gut-related diseases, including irritable bowel syndrome, Crohn's disease, and ulcerative colitis.</p>
-        </div>
-        
-        <div class="news-item">
-          <h3>New Process for Automated NGS-based Clonality Testing</h3>
-          <p>A new research paper published in Oncotarget describes a new process for automated and highly accurate reporting of NGS-based clonality testing. The process, which was developed by researchers at the University of California, San Francisco, could help to improve the accuracy of cancer diagnosis and treatment.</p>
-        </div>
-        
-        <div class="news-item">
-          <h3>Bacteroides thetaiotaomicron Linked to Obesity</h3>
-          <p>A new study published in Nature Microbiology found that a type of bacteria called Bacteroides thetaiotaomicron plays a key role in the development of obesity. The study, which was conducted by researchers at the University of California, Berkeley, suggests that targeting Bacteroides thetaiotaomicron could be a potential way to prevent or treat obesity.</p>
-        </div>
-        
-        <div class="news-item">
-          <h3>CRISPR-Cas9 Gene Therapy Successfully Treats Rare Form of Blindness</h3>
-          <p>A new study published in Nature Biotechnology found that a type of gene therapy called CRISPR-Cas9 can be used to successfully treat a rare form of blindness. The study, which was conducted by researchers at the University of Pennsylvania, is the first to show that CRISPR-Cas9 can be used to treat a genetic disease in humans.</p>
-        </div>
-      </div>
     </section>
     
     <section id="projects" style="display: none;">
       <!-- Projects section content goes here -->
-      <h2>Projects</h2>
-      <p>This is the projects section of the website.</p>
     </section>
     
     <section id="contact" style="display: none;">
       <!-- Contact section content goes here -->
-      <h2>Contact Us</h2>
-      <p>This is the contact us section of the website.</p>
     </section>
   </main>
   
@@ -132,5 +107,61 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Fetch forum data from the server using AJAX
+    function fetchForumData() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "forum-data-endpoint", true); // Replace "forum-data-endpoint" with your actual server endpoint URL
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var forumData = JSON.parse(xhr.responseText);
+          displayForumData(forumData);
+        }
+      };
+      xhr.send();
+    }
+
+    // Display the forum data on the page
+    function displayForumData(data) {
+      var queriesContainer = document.getElementById("queries-container");
+
+      // Clear existing content
+      queriesContainer.innerHTML = "";
+
+      // Loop through the forum data and create HTML elements to display each query and its replies
+      for (var i = 0; i < data.length; i++) {
+        var query = data[i];
+
+        var queryElement = document.createElement("div");
+        queryElement.classList.add("query");
+        queryElement.innerHTML = "<h3>" + query.title + "</h3>" +
+                                 "<p>" + query.content + "</p>";
+
+        // Create HTML elements for displaying replies
+        var repliesElement = document.createElement("div");
+        repliesElement.classList.add("replies");
+
+        // Loop through the replies and create HTML elements for each reply
+        for (var j = 0; j < query.replies.length; j++) {
+          var reply = query.replies[j];
+          var replyElement = document.createElement("div");
+          replyElement.classList.add("reply");
+          replyElement.innerHTML = "<p>" + reply.content + "</p>";
+
+          // Append the reply element to the replies container
+          repliesElement.appendChild(replyElement);
+        }
+
+        // Append the replies container to the query element
+        queryElement.appendChild(repliesElement);
+
+        // Append the query element to the queries container
+        queriesContainer.appendChild(queryElement);
+      }
+    }
+
+    // Fetch forum data when the page loads
+    window.addEventListener("load", fetchForumData);
+  </script>
 </body>
 </html>
