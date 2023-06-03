@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BioLogicHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="logo.png" alt="BioInfoHub Logo" class="header-logo">
+      </div>
+      <div class="title-container">
+        <h1>BioInfoHub</h1>
+        <span class="logo-slogan">"Connecting Bioinformaticians, Empowering Discoveries!"</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('forum')">Forum</a></li>
+        <li><a onclick="showSection('news')">News</a></li>
+        <li><a onclick="showSection('projects')">Projects</a></li>
+        <li><a onclick="showSection('contact')">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="home">
+      <!-- Home page content goes here -->
+      <div class="home-container">
+        <h1>Welcome to BioInfoHub</h1>
+        <div class="about-container">
+          <h2>About BioInfoHub</h2>
+          <p>BioInfoHub is a vibrant online community dedicated to bringing together bioinformaticians from around the globe. Our platform serves as a central hub for professionals, researchers, and enthusiasts in the field of bioinformatics, fostering collaboration, knowledge exchange, and empowerment.</p>
+          <p>Join us to connect with a diverse network of bioinformaticians, spanning various domains and expertise. Whether you're a seasoned bioinformatician or just starting your journey in this exciting field, BioInfoHub provides a supportive environment to grow, learn, and share experiences.</p>
+        </div>
+        
+        <div class="offer-container">
+          <h2>What We Offer</h2>
+          <ul>
+            <li><strong>Connect with Experts:</strong> Engage with leading bioinformaticians and industry professionals through forums, discussion boards, and networking events. Share your ideas, seek advice, and build valuable connections within the community.</li>
+            <li><strong>Stay Informed:</strong> Access the latest news, trends, and breakthroughs in bioinformatics. Our curated content keeps you updated on cutting-edge research, emerging technologies, and industry developments, ensuring you stay at the forefront of the field.</li>
+            <li><strong>Discover Resources:</strong> Explore a vast array of resources, including tutorials, datasets, software tools, and educational materials. Whether you're looking to enhance your skills or dive into a new area of bioinformatics, BioInfoHub is your go-to source.</li>
+            <li><strong>Collaborate on Projects:</strong> Find potential collaborators for your research projects and contribute to ongoing initiatives. BioInfoHub provides a platform for interdisciplinary collaborations, enabling you to leverage collective expertise and accelerate discoveries.</li>
+            <li><strong>Career Development:</strong> Boost your professional growth with career resources, job postings, and mentorship opportunities. Connect with mentors who can guide you on your bioinformatics career path and access exclusive industry insights.</li>
+          </ul>
+        </div>
+        
+        <div class="join-container">
+          <h2>Join BioInfoHub</h2>
+          <p>Join BioInfoHub today and become part of a thriving community that is transforming the world of bioinformatics. Together, we can unlock the potential of bioinformatics and drive groundbreaking discoveries that advance our understanding of life.</p>
+          <p>Start connecting, empowering, and exploring with BioInfoHub - where bioinformaticians thrive!</p>
+        </div>
+      
+        <h2>Upcoming Event</h2>
+        <div class="event-block">
+          <div class="event-details">
+            <h3>Conference on Bioinformatics</h3>
+            <p>Date: June 10, 2023</p>
+            <p>Location: Virtual</p>
+            <a href="registration.html" class="event-register">Register Now</a>
+          </div>
+          <div class="event-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut sem et diam blandit sollicitudin. Curabitur vehicula eros at magna interdum, non faucibus nisi rutrum. Vestibulum sed urna nec orci semper commodo.</p>
+            <p>Morbi tincidunt turpis vel risus tincidunt, sed ullamcorper lorem commodo. Integer vel magna ut enim euismod consequat. Mauris sagittis fermentum ex vitae fermentum. Sed viverra mauris ac lorem varius, at tincidunt felis lacinia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="forum" style="display: none;">
+      <!-- Forum page content goes here -->
+      <h2>BioInfoHub Forum</h2>
+      <form id="query-form" class="forum-form">
+        <label for="name-input">Your Name:</label>
+        <input type="text" id="name-input" placeholder="Enter your name" required>
+        
+        <label for="query-input">Enter your query:</label>
+        <input type="text" id="query-input" placeholder="Type your query..." required>
+        
+        <label for="image-input">Attach an Image:</label>
+        <input type="file" id="image-input">
+        
+        <button type="submit">Submit</button>
+      </form>
+      <div id="queries-container"></div>
+    </section>
+    
+<section id="news" style="display: none;">
+      <!-- News section content goes here -->
+      <h2>News</h2>
+      <div class="news-container">
+        <div class="news-item">
+          <h3>SNIPR Biome Announces Preclinical Research on CRISPR-armed Phage Therapeutic</h3>
+          <p>SNIPR Biome ApS has announced preclinical research on SNIPR001, a CRISPR-armed phage therapeutic that can specifically target and remove E. coli in the human gut. The company believes that SNIPR001 could be a potential treatment for a variety of gut-related diseases, including irritable bowel syndrome, Crohn's disease, and ulcerative colitis.</p>
+        </div>
+        
+        <div class="news-item">
+          <h3>New Process for Automated NGS-based Clonality Testing</h3>
+          <p>A new research paper published in Oncotarget describes a new process for automated and highly accurate reporting of NGS-based clonality testing. The process, which was developed by researchers at the University of California, San Francisco, could help to improve the accuracy of cancer diagnosis and treatment.</p>
+        </div>
+        
+        <div class="news-item">
+          <h3>Bacteroides thetaiotaomicron Linked to Obesity</h3>
+          <p>A new study published in Nature Microbiology found that a type of bacteria called Bacteroides thetaiotaomicron plays a key role in the development of obesity. The study, which was conducted by researchers at the University of California, Berkeley, suggests that targeting Bacteroides thetaiotaomicron could be a potential way to prevent or treat obesity.</p>
+        </div>
+        
+        <div class="news-item">
+          <h3>CRISPR-Cas9 Gene Therapy Successfully Treats Rare Form of Blindness</h3>
+          <p>A new study published in Nature Biotechnology found that a type of gene therapy called CRISPR-Cas9 can be used to successfully treat a rare form of blindness. The study, which was conducted by researchers at the University of Pennsylvania, is the first to show that CRISPR-Cas9 can be used to treat a genetic disease in humans.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="projects" style="display: none;">
+      <!-- Projects section content goes here -->
+      <h2>Projects</h2>
+      <p>This is the projects section of the website.</p>
+    </section>
+    
+    <section id="contact" style="display: none;">
+      <!-- Contact section content goes here -->
+      <h2>Contact Us</h2>
+      <p>This is the contact us section of the website.</p>
+    </section>
+  </main>
+  
+  <footer>
+    &copy; 2023 BioLogicHub. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
