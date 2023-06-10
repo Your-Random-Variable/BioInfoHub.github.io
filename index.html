@@ -18,9 +18,9 @@
     <nav>
       <ul>
         <li><a onclick="showSection('home')">Home</a></li>
-        <li><a href="https://discord.gg/UTd7JH8Z" target="_blank">Forum</a></li>
-        <li><a onclick="showSection('news')">News</a></li>
-        <li><a onclick="showSection('projects')">Projects</a></li>
+        <li><a onclick="showSection('forum')">Forum</a></li>
+        <li><a href="#" onclick="showSection('newsSection')">News</a></li>
+        <li><a href="#" onclick="showSection('projectsSection')">Projects</a></li>
         <li><a onclick="showSection('contact')">Contact Us</a></li>
       </ul>
     </nav>
@@ -28,7 +28,6 @@
   
   <main>
     <section id="home">
-      <!-- Home page content goes here -->
       <div class="home-container">
         <h1>Welcome to BioInfoHub</h1>
         <div class="about-container">
@@ -47,94 +46,47 @@
             <li><strong>Career Development:</strong> Boost your professional growth with career resources, job postings, and mentorship opportunities. Connect with mentors who can guide you on your bioinformatics career path and access exclusive industry insights.</li>
           </ul>
         </div>
-        
-        <div class="cta-container">
-          <h2>Join the Community Today!</h2>
-          <p>Ready to embark on an exciting journey in bioinformatics? Join BioInfoHub and become part of a thriving global community. Click the button below to register and unlock a world of opportunities!</p>
-          <a href="https://bioinfohub.com/register" class="cta-button">Register Now</a>
-        </div>
       </div>
     </section>
-    
     <section id="forum">
-      <!-- Forum content will be dynamically loaded using JavaScript -->
-    </section>
-    
-    <section id="news">
-      <!-- News content goes here -->
-      <div class="news-container">
-        <h2>Latest News</h2>
-        <div class="news-item">
-          <h3>Study Reveals New Insights into Gene Expression Patterns</h3>
-          <p>A recent study published in the Journal of Bioinformatics sheds light on the intricate mechanisms of gene expression...</p>
-          <a href="#" class="read-more-link">Read More</a>
+      <div class="forum-container">
+        <h1>Forum</h1>
+        <div class="forum-description">
+          <p>Engage in meaningful discussions with bioinformaticians from around the world. Share your knowledge, seek advice, and connect with like-minded professionals in our vibrant community forum.</p>
         </div>
-        <div class="news-item">
-          <h3>Upcoming Conference: Bioinformatics Innovations 2023</h3>
-          <p>Mark your calendars for the Bioinformatics Innovations 2023 conference, where leading researchers and industry experts...</p>
-          <a href="#" class="read-more-link">Read More</a>
+        <div class="join-container">
+          <a href="https://discord.gg/UTd7JH8Z" class="join-button" target="_blank">Join Community</a>
         </div>
       </div>
     </section>
-    
-    <section id="projects">
-      <!-- Projects content goes here -->
-      <div class="projects-container">
-        <h2>Current Projects</h2>
-        <div class="project-item">
-          <h3>Project A: Data Integration for Cancer Genomics</h3>
-          <p>We are actively working on integrating multi-omics data to identify novel biomarkers for cancer diagnosis and treatment...</p>
-          <a href="#" class="read-more-link">Read More</a>
-        </div>
-        <div class="project-item">
-          <h3>Project B: Machine Learning for Drug Discovery</h3>
-          <p>Our team is developing advanced machine learning models to accelerate the discovery of new drug candidates...</p>
-          <a href="#" class="read-more-link">Read More</a>
-        </div>
-      </div>
-    </section>
-    
-    <section id="contact">
-      <!-- Contact section content goes here -->
-      <div class="contact-container">
-        <h2>Contact Us</h2>
-        <p>Have questions, feedback, or collaboration ideas? Get in touch with us!</p>
-        <form id="contact-form" action="submit.php" method="POST">
-          <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" required>
-          
-          <label for="email">Your Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-          
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
+   <section id="newsSection">
+    <input id="searchInput" type="text" placeholder="Search news" />
+    <button onclick="searchNews()">Search</button>
+    <div id="newsContent"></div>
+  </section>
+
+  <section id="projectsSection">
+    <input id="searchInput" type="text" placeholder="Search projects" />
+    <button onclick="searchProjects()">Search</button>
+    <div id="projectsContent"></div>
+  </section>
   </main>
   
   <footer>
     <div class="footer-container">
-      <div class="footer-logo">
-        <img src="logo.png" alt="BioInfoHub Logo" class="footer-logo-img">
+      <div class="footer-logo-container">
+        <img src="logo.png" alt="BioInfoHub Logo" class="footer-logo">
       </div>
-      <div class="footer-links">
-        <ul>
-          <li><a onclick="showSection('home')">Home</a></li>
-          <li><a href="https://discord.gg/UTd7JH8Z" target="_blank">Forum</a></li>
-          <li><a onclick="showSection('news')">News</a></li>
-          <li><a onclick="showSection('projects')">Projects</a></li>
-          <li><a onclick="showSection('contact')">Contact Us</a></li>
-        </ul>
+      <div class="footer-social-links">
+        <a href="https://www.linkedin.com/company/bioinfohub" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/bioinfohub" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://github.com/bioinfohub" target="_blank"><img src="github.png" alt="GitHub"></a>
       </div>
     </div>
-    <div class="footer-disclaimer">
-      <p>&copy; 2023 BioInfoHub. All rights reserved. | Designed by YourName</p>
+    <div class="footer-info">
+      <p>&copy; 2023 BioInfoHub. All rights reserved.</p>
     </div>
   </footer>
-  
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
