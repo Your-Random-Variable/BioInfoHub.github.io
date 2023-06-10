@@ -12,7 +12,7 @@ function searchNews() {
   if (searchTerm !== '') {
     // Perform search operation for news using the searchTerm
     // Example: fetch news data from an API
-    fetch('https://bionews-api.herokuapp.com/api/posts?category=bioinformatics&limit=10')
+    fetch(`https://bionews-api.herokuapp.com/api/posts?category=bioinformatics&limit=10&search=${searchTerm}`)
       .then(response => response.json())
       .then(newsData => {
         // Update the newsContent element with the retrieved data
@@ -46,7 +46,7 @@ function searchProjects() {
   if (searchTerm !== '') {
     // Perform search operation for projects using the searchTerm
     // Example: fetch project data from an API
-    fetch('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=bioproject&term=bioinformatics&retmax=10')
+    fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=bioproject&term=${searchTerm}&retmax=10`)
       .then(response => response.json())
       .then(projectsData => {
         // Update the projectsContent element with the retrieved data
