@@ -1,14 +1,13 @@
 /* Global Styles */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
-/* Header */
+/* Header Styles */
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #f0f0f0;
   padding: 20px;
 }
 
@@ -23,41 +22,51 @@ header {
 
 .header-logo {
   width: 100px;
-  height: 100px;
 }
 
 .title-container {
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+}
+
+.title-container h1 {
+  font-size: 24px;
+  margin: 0;
 }
 
 .logo-slogan {
   font-size: 14px;
-  margin-top: 5px;
+  color: #666;
 }
 
 nav ul {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 nav ul li {
-  display: inline;
+  margin-right: 10px;
 }
 
 nav ul li a {
-  color: #fff;
   text-decoration: none;
-  margin-left: 10px;
+  color: #333;
+  padding: 5px;
 }
 
-/* Main */
+nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Main Content Styles */
 main {
   padding: 20px;
 }
 
-/* Home Section */
 .home-container {
   text-align: center;
 }
@@ -66,127 +75,174 @@ main {
   margin-bottom: 30px;
 }
 
+.about-container h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
 .offer-container {
   margin-bottom: 30px;
 }
 
-.join-container {
-  margin-bottom: 50px;
+.offer-container h2 {
+  font-size: 20px;
+  margin: 0;
 }
 
-.join-button {
+.offer-container ul {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+.cta-container {
+  margin-bottom: 30px;
+}
+
+.cta-container h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.cta-button {
   display: inline-block;
-  padding: 10px 20px;
   background-color: #333;
   color: #fff;
+  padding: 10px 20px;
   text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
 
-.join-button:hover {
-  background-color: #555;
+.cta-button:hover {
+  background-color: #666;
 }
 
-/* News Section */
 .news-container {
-  text-align: center;
+  margin-bottom: 30px;
+}
+
+.news-container h2 {
+  font-size: 20px;
+  margin: 0;
 }
 
 .news-item {
+  margin-bottom: 20px;
+}
+
+.news-item h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.read-more-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.read-more-link:hover {
+  color: #666;
+}
+
+.projects-container {
   margin-bottom: 30px;
 }
 
-/* Projects Section */
-.projects-container {
-  text-align: center;
+.projects-container h2 {
+  font-size: 20px;
+  margin: 0;
 }
 
 .project-item {
+  margin-bottom: 20px;
+}
+
+.project-item h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.contact-container {
   margin-bottom: 30px;
 }
 
-/* Contact Section */
-.contact-container {
-  text-align: center;
+.contact-container h2 {
+  font-size: 20px;
+  margin: 0;
 }
 
-.contact-container form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.contact-container p {
+  margin-bottom: 10px;
 }
 
-.contact-container label {
+#contact-form label {
+  display: block;
   margin-bottom: 5px;
 }
 
-.contact-container input,
-.contact-container textarea {
-  margin-bottom: 15px;
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
   padding: 5px;
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
-.submit-button {
+#contact-form button {
+  background-color: #333;
+  color: #fff;
   padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.submit-button:hover {
-  background-color: #555;
+#contact-form button:hover {
+  background-color: #666;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
 }
 
 .footer-container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
 }
 
-.footer-logo-container {
+.footer-logo {
   margin-right: 10px;
 }
 
-.footer-logo {
-  width: 20px;
-  height: 20px;
-}
-
-.footer-links {
-  margin-left: 20px;
+.footer-logo-img {
+  width: 50px;
 }
 
 .footer-links ul {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .footer-links ul li {
   display: inline;
+  margin-right: 10px;
 }
 
 .footer-links ul li a {
-  color: #fff;
   text-decoration: none;
-  margin-left: 10px;
+  color: #333;
 }
 
-.footer-info {
+.footer-links ul li a:hover {
+  color: #666;
+}
+
+.footer-disclaimer p {
+  margin: 0;
   font-size: 12px;
+  color: #666;
 }
