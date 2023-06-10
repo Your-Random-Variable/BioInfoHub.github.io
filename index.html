@@ -19,8 +19,6 @@
       <ul>
         <li><a onclick="showSection('home')">Home</a></li>
         <li><a href="https://discord.gg/UTd7JH8Z" target="_blank">Forum</a></li>
-
-
         <li><a onclick="showSection('news')">News</a></li>
         <li><a onclick="showSection('projects')">Projects</a></li>
         <li><a onclick="showSection('contact')">Contact Us</a></li>
@@ -51,141 +49,93 @@
         </div>
         
         <div class="join-container">
-          <h2>Join BioInfoHub</h2>
-          <p>Join BioInfoHub today and become part of a thriving community that is transforming the world of bioinformatics. Together, we can unlock the potential of bioinformatics and drive groundbreaking discoveries that advance our understanding of life.</p>
-          <p>Start connecting, empowering, and exploring with BioInfoHub - where bioinformaticians thrive!</p>
+          <h2>Join BioInfoHub Today!</h2>
+          <p>Ready to become a part of the BioInfoHub community? Join us now and unlock a world of opportunities in bioinformatics!</p>
+          <a href="https://www.bioinfohub.com/register" class="join-button">Join Now</a>
         </div>
-      
-        <h2>Upcoming Event</h2>
-        <div class="event-block">
-          <div class="event-details">
-            <h3>Conference on Bioinformatics</h3>
-            <p>Date: June 10, 2023</p>
-            <p>Location: Virtual</p>
-            <a href="registration.html" class="event-register">Register Now</a>
-          </div>
-          <div class="event-description">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut sem et diam blandit sollicitudin. Curabitur vehicula eros at magna interdum, non faucibus nisi rutrum. Vestibulum sed urna nec orci semper commodo.</p>
-            <p>Morbi tincidunt turpis vel risus tincidunt, sed ullamcorper lorem commodo. Integer vel magna ut enim euismod consequat. Mauris sagittis fermentum ex vitae fermentum. Sed viverra mauris ac lorem varius, at tincidunt felis lacinia.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="forum" style="display: none;">
-      <!-- Forum page content goes here -->
-      <h2>BioInfoHub Forum</h2>
-      <form id="query-form" class="forum-form">
-        <label for="name-input">Your Name:</label>
-        <input type="text" id="name-input" placeholder="Enter your name" required>
-        
-        <label for="query-input">Enter your query:</label>
-        <input type="text" id="query-input" placeholder="Type your query..." required>
-        
-        <label for="image-input">Attach an Image:</label>
-        <input type="file" id="image-input">
-        
-        <button type="submit">Submit</button>
-      </form>
-      <div id="queries-container">
-        <!-- Forum queries and replies will be dynamically added here using JavaScript -->
       </div>
     </section>
     
-   <section id="news" style="display: none;">
-      <!-- News section content goes here -->
-      <h2>News</h2>
+    <section id="forum">
+      <!-- Forum content will be dynamically loaded here -->
+    </section>
+    
+    <section id="news">
+      <!-- News content goes here -->
       <div class="news-container">
+        <h1>Latest News</h1>
         <div class="news-item">
-          <h3>SNIPR Biome Announces Preclinical Research on CRISPR-armed Phage Therapeutic</h3>
-          <p>SNIPR Biome ApS has announced preclinical research on SNIPR001, a CRISPR-armed phage therapeutic that can specifically target and remove E. coli in the human gut. The company believes that SNIPR001 could be a potential treatment for a variety of gut-related diseases, including irritable bowel syndrome, Crohn's disease, and ulcerative colitis.</p>
+          <h2>Research Breakthrough: New Algorithm Identifies Disease-Causing Mutations</h2>
+          <p>A team of researchers at BioInfoHub has developed an innovative algorithm that significantly improves the identification of disease-causing mutations in human genomes. The algorithm, named MutDetect, combines machine learning techniques with advanced data analysis to accurately pinpoint genetic variations associated with various disorders.</p>
+          <p>The breakthrough holds tremendous potential for precision medicine, as it enables faster and more accurate diagnosis of genetic diseases, leading to targeted treatments and improved patient outcomes. The research team plans to collaborate with medical institutions worldwide to implement MutDetect in clinical settings.</p>
         </div>
         
         <div class="news-item">
-          <h3>New Process for Automated NGS-based Clonality Testing</h3>
-          <p>A new research paper published in Oncotarget describes a new process for automated and highly accurate reporting of NGS-based clonality testing. The process, which was developed by researchers at the University of California, San Francisco, could help to improve the accuracy of cancer diagnosis and treatment.</p>
-        </div>
-        
-        <div class="news-item">
-          <h3>Bacteroides thetaiotaomicron Linked to Obesity</h3>
-          <p>A new study published in Nature Microbiology found that a type of bacteria called Bacteroides thetaiotaomicron plays a key role in the development of obesity. The study, which was conducted by researchers at the University of California, Berkeley, suggests that targeting Bacteroides thetaiotaomicron could be a potential way to prevent or treat obesity.</p>
-        </div>
-        
-        <div class="news-item">
-          <h3>CRISPR-Cas9 Gene Therapy Successfully Treats Rare Form of Blindness</h3>
-          <p>A new study published in Nature Biotechnology found that a type of gene therapy called CRISPR-Cas9 can be used to successfully treat a rare form of blindness. The study, which was conducted by researchers at the University of Pennsylvania, is the first to show that CRISPR-Cas9 can be used to treat a genetic disease in humans.</p>
+          <h2>New Bioinformatics Tools Released: Simplifying Metagenomic Analysis</h2>
+          <p>In collaboration with leading bioinformatics software developers, BioInfoHub has released a suite of user-friendly tools for metagenomic analysis. These tools aim to simplify the complex process of analyzing genetic material from environmental samples, enabling researchers to gain valuable insights into microbial communities and ecological dynamics.</p>
+          <p>The toolset includes streamlined workflows, interactive visualizations, and comprehensive documentation, making it accessible to both experts and novices in the field. BioInfoHub is committed to advancing metagenomics research and empowering researchers to explore the intricate world of microbial biodiversity.</p>
         </div>
       </div>
     </section>
     
-    <section id="projects" style="display: none;">
-      <!-- Projects section content goes here -->
+    <section id="projects">
+      <!-- Projects content goes here -->
+      <div class="projects-container">
+        <h1>Projects</h1>
+        <div class="project-item">
+          <h2>Project X: Decoding the Human Epigenome</h2>
+          <p>Project X, led by a team of international researchers, aims to decipher the human epigenome to gain a deeper understanding of gene regulation and its implications in health and disease. By mapping epigenetic modifications across various tissues and cell types, the project aims to uncover key regulatory mechanisms and identify potential therapeutic targets.</p>
+          <p>The project is actively seeking collaborators from diverse backgrounds, including bioinformatics, genetics, and molecular biology. If you're passionate about epigenetics and want to contribute to this groundbreaking endeavor, reach out to the project team for more information.</p>
+        </div>
+        
+        <div class="project-item">
+          <h2>Project Y: AI-Based Drug Discovery for Rare Diseases</h2>
+          <p>Project Y, a collaboration between BioInfoHub and pharmaceutical companies, focuses on leveraging artificial intelligence (AI) for accelerated drug discovery in the field of rare diseases. The project combines AI algorithms, big data analysis, and high-throughput screening to identify potential drug candidates and repurposing opportunities.</p>
+          <p>If you're a bioinformatician, computational biologist, or AI expert with a passion for making a difference in rare disease research, Project Y offers a unique opportunity to contribute your skills and expertise to the development of life-changing therapies.</p>
+        </div>
+      </div>
     </section>
     
-    <section id="contact" style="display: none;">
-      <!-- Contact section content goes here -->
+    <section id="contact">
+      <!-- Contact form goes here -->
+      <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form action="submit.php" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
     </section>
   </main>
   
   <footer>
-    &copy; 2023 BioLogicHub. All rights reserved.
+    <div class="footer-container">
+      <div class="footer-logo-container">
+        <img src="logo.png" alt="BioInfoHub Logo" class="footer-logo">
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a onclick="showSection('home')">Home</a></li>
+          <li><a href="https://discord.gg/UTd7JH8Z" target="_blank">Forum</a></li>
+          <li><a onclick="showSection('news')">News</a></li>
+          <li><a onclick="showSection('projects')">Projects</a></li>
+          <li><a onclick="showSection('contact')">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-info">
+      &copy; 2023 BioInfoHub. All rights reserved. | Designed by BioLogicHub Web Design
+    </div>
   </footer>
-
+  
   <script src="script.js"></script>
-  <script>
-    // Fetch forum data from the server using AJAX
-    function fetchForumData() {
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", "forum-data-endpoint", true); // Replace "forum-data-endpoint" with your actual server endpoint URL
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          var forumData = JSON.parse(xhr.responseText);
-          displayForumData(forumData);
-        }
-      };
-      xhr.send();
-    }
-
-    // Display the forum data on the page
-    function displayForumData(data) {
-      var queriesContainer = document.getElementById("queries-container");
-
-      // Clear existing content
-      queriesContainer.innerHTML = "";
-
-      // Loop through the forum data and create HTML elements to display each query and its replies
-      for (var i = 0; i < data.length; i++) {
-        var query = data[i];
-
-        var queryElement = document.createElement("div");
-        queryElement.classList.add("query");
-        queryElement.innerHTML = "<h3>" + query.title + "</h3>" +
-                                 "<p>" + query.content + "</p>";
-
-        // Create HTML elements for displaying replies
-        var repliesElement = document.createElement("div");
-        repliesElement.classList.add("replies");
-
-        // Loop through the replies and create HTML elements for each reply
-        for (var j = 0; j < query.replies.length; j++) {
-          var reply = query.replies[j];
-          var replyElement = document.createElement("div");
-          replyElement.classList.add("reply");
-          replyElement.innerHTML = "<p>" + reply.content + "</p>";
-
-          // Append the reply element to the replies container
-          repliesElement.appendChild(replyElement);
-        }
-
-        // Append the replies container to the query element
-        queryElement.appendChild(repliesElement);
-
-        // Append the query element to the queries container
-        queriesContainer.appendChild(queryElement);
-      }
-    }
-
-    // Fetch forum data when the page loads
-    window.addEventListener("load", fetchForumData);
-  </script>
 </body>
 </html>
