@@ -7,42 +7,50 @@ function showSection(sectionId) {
 }
 
 function searchNews() {
-  const searchInput = document.getElementById('newsSection').querySelector('input');
-  const searchTerm = searchInput.value.trim();
-  if (searchTerm !== '') {
-    const rssFeedUrl = 'https://journals.plos.org/ploscompbiol/feed/rss'; // Replace with the actual RSS feed URL
+  // RSS feed URL for bioinformatics news
+  const rssFeedUrl = 'https://journals.plos.org/ploscompbiol/feed/rss';
 
-    fetch(rssFeedUrl)
-      .then(response => response.text())
-      .then(xmlData => {
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlData, 'application/xml');
-        const items = xmlDoc.getElementsByTagName('item');
+  // Number of news items to display
+  const newsItemCount = 10;
 
-        // Update the newsContent element with the retrieved RSS feed items
-        const newsContent = document.getElementById('newsContent');
-        newsContent.innerHTML = '';
+  // Fetch the RSS feed
+  fetch(rssFeedUrl)
+    .then(response => response.text())
+    .then(xmlString => {
+      // Parse the XML string to an XML document
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
 
-        for (let i = 0; i < items.length; i++) {
-          const title = items[i].getElementsByTagName('title')[0].textContent;
-          const description = items[i].getElementsByTagName('description')[0].textContent;
-          const link = items[i].getElementsByTagName('link')[0].textContent;
+      // Retrieve the news items from the XML document
+      const items = xmlDoc.getElementsByTagName('item');
 
-          const newsItemElement = document.createElement('div');
-          newsItemElement.classList.add('news-item');
-          newsItemElement.innerHTML = `
-            <h2>${title}</h2>
-            <p>${description}</p>
-            <a href="${link}" target="_blank">Read more</a>
-          `;
+      // Update the newsContent element with the retrieved data
+      const newsContent = document.getElementById('newsContent');
+      // Clear previous content
+      newsContent.innerHTML = '';
 
-          newsContent.appendChild(newsItemElement);
-        }
-      })
-      .catch(error => {
-        console.log('Error:', error);
-      });
-  }
+      // Iterate through the news items and create HTML elements for each item
+      for (let i = 0; i < Math.min(newsItemCount, items.length); i++) {
+        const item = items[i];
+        const title = item.querySelector('title').textContent;
+        const link = item.querySelector('link').textContent;
+        const description = item.querySelector('description').textContent;
+
+        const newsItemElement = document.createElement('div');
+        newsItemElement.classList.add('news-item');
+        newsItemElement.innerHTML = `
+          <h2>${title}</h2>
+          <p>${description}</p>
+          <a href="${link}" target="_blank">Read more</a>
+        `;
+
+        // Append the news item element to the newsContent element
+        newsContent.appendChild(newsItemElement);
+      }
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
 }
 
 
