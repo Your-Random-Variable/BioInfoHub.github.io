@@ -10,7 +10,7 @@ function searchNews() {
   const searchInput = document.getElementById('newsSection').querySelector('input');
   const searchTerm = searchInput.value.trim();
   if (searchTerm !== '') {
-    const rssFeedUrl = 'https://example.com/bioinformatics-news/rss'; // Replace with the actual RSS feed URL
+    const rssFeedUrl = 'https://journals.plos.org/ploscompbiol/feed/rss'; // Replace with the actual RSS feed URL
 
     fetch(rssFeedUrl)
       .then(response => response.text())
