@@ -10,35 +10,41 @@ function searchNews() {
   const searchInput = document.getElementById('newsSection').querySelector('input');
   const searchTerm = searchInput.value.trim();
   if (searchTerm !== '') {
-    // Perform search operation for news using the searchTerm
-    // Example: fetch news data from an API
-    fetch(`https://bionews-api.herokuapp.com/api/posts?category=bioinformatics&limit=10&search=${searchTerm}`)
-      .then(response => response.json())
-      .then(newsData => {
-        // Update the newsContent element with the retrieved data
+    const rssFeedUrl = 'https://example.com/bioinformatics-news/rss'; // Replace with the actual RSS feed URL
+
+    fetch(rssFeedUrl)
+      .then(response => response.text())
+      .then(xmlData => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlData, 'application/xml');
+        const items = xmlDoc.getElementsByTagName('item');
+
+        // Update the newsContent element with the retrieved RSS feed items
         const newsContent = document.getElementById('newsContent');
-        // Clear previous content
         newsContent.innerHTML = '';
 
-        // Iterate through the newsData and create HTML elements for each news item
-        newsData.forEach(newsItem => {
+        for (let i = 0; i < items.length; i++) {
+          const title = items[i].getElementsByTagName('title')[0].textContent;
+          const description = items[i].getElementsByTagName('description')[0].textContent;
+          const link = items[i].getElementsByTagName('link')[0].textContent;
+
           const newsItemElement = document.createElement('div');
           newsItemElement.classList.add('news-item');
           newsItemElement.innerHTML = `
-            <h2>${newsItem.title}</h2>
-            <p>${newsItem.description}</p>
-            <a href="${newsItem.url}">Read more</a>
+            <h2>${title}</h2>
+            <p>${description}</p>
+            <a href="${link}" target="_blank">Read more</a>
           `;
 
-          // Append the news item element to the newsContent element
           newsContent.appendChild(newsItemElement);
-        });
+        }
       })
       .catch(error => {
         console.log('Error:', error);
       });
   }
 }
+
 
 function searchProjects() {
   const searchInput = document.getElementById('projectsSection').querySelector('input');
