@@ -27,12 +27,12 @@ header {
   background-image: url("genome.png");
   background-size: cover;
   color: #fff;
-  padding: 20px;
+  padding: 10px; /* Reduce the padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
+
 
 .header-container {
   display: flex;
@@ -158,11 +158,11 @@ footer {
   margin: 0;
 }
  #news-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      background-color: #f9f9f9;
-      padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
 
     }
@@ -250,37 +250,13 @@ footer {
   margin: 0 auto;
   max-width: 700px;
 }
-
-/* Media Queries */
+/* Styles for mobile devices */
 @media (max-width: 767px) {
-  /* Styles for mobile devices */
-
   header {
-    flex-direction: column;
-    align-items: center;
+    padding: 10px; /* Adjust the padding as needed */
   }
-
-  .logo-container {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .header-logo {
-    max-width: 80px;
-  }
-
-  nav ul li {
-    display: block;
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .footer-container {
-    flex-direction: column;
-  }
-
-  .footer-social a {
-    margin-right: 0;
-    margin-bottom: 10px;
+  
+  #news-container {
+    grid-template-columns: repeat(1, 1fr); /* Display one news item per row */
   }
 }
