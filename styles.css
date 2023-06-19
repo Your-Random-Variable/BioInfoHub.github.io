@@ -1,211 +1,253 @@
 /* Reset default browser styles */
-body, h1, h2, p, ul, li {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body styles */
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
 }
 
-/* Header styles */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header Styles */
 header {
   background-image: url("genome.png");
   background-size: cover;
+  color: #fff;
   padding: 20px;
-  color: #fff; /* Set font color to white */
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  flex-direction: column;
 }
 
 .logo-container {
-  flex: 1;
-}
-
-.title-container {
-  flex: 3;
+  margin-right: 20px;
 }
 
 .header-logo {
-  height: 50px;
+  max-width: 100px;
+}
+
+.title-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .logo-slogan {
-  display: block;
-  font-size: 14px;
-  color: #888;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #fff; /* Set link color to white */
-  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: #fff;
 }
 
-.title-container h1 {
-  font-size: 36px; /* Increase font size */
-  margin-top: 10px; /* Add margin to separate logo and title */
+nav ul li a:hover {
+  background-color: #eee;
 }
 
-.search-container {
-  display: none;
+nav ul li a:active {
+  background-color: #ddd;
 }
 
-/* Main styles */
+nav ul li a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Main Content Styles */
 main {
   padding: 20px;
 }
 
 .home-container {
-  max-width: 800px;
-  margin: 0 auto;
+  text-align: center;
 }
 
-.home-container h1 {
-  font-size: 24px; /* Decrease font size */
+.about-container,
+.offer-container {
   margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
 
 .about-container h2,
 .offer-container h2 {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
-.about-container p {
-  margin-bottom: 15px;
+.forum-container {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
 
-.offer-container ul {
-  padding-left: 20px;
+.forum-container h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.forum-container p {
   margin-bottom: 20px;
 }
 
-.offer-container li {
-  margin-bottom: 10px;
-}
-
-/* Forum styles */
-.forum-container {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-  background-color: #f5f5f5;
-}
-
-.forum-description p {
-  margin-bottom: 15px;
-}
-
-.join-container {
-  margin-top: 20px;
-}
-
-.join-button {
+.forum-button {
+  display: inline-block;
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
-  border: none;
   border-radius: 5px;
-  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.join-button:hover {
+.forum-button:hover {
   background-color: #555;
 }
 
-/* Footer styles */
+/* Footer Styles */
 footer {
   background-color: #333;
   color: #fff;
   padding: 20px;
+  text-align: center;
 }
 
 .footer-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+}
+
+.footer-social a {
+  margin-right: 10px;
+}
+
+.footer-container p {
+  margin: 0;
+}
+ #news-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 20px;
+      background-color: #f9f9f9;
+      padding: 20px;
+}
+
+    }
+
+    .news-item {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+    }
+
+    .news-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .news-link {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+.news-title {
+  font-size: 20px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.footer-logo-container {
-  flex: 1;
-  text-align: center;
-}
-
-.footer-logo {
-  height: 30px;
-}
-
-.footer-social-links {
-  flex: 1;
-  text-align: center;
-}
-
-.footer-social-links img {
-  height: 20px;
-  margin: 0 5px;
-}
-
-.footer-info {
-  text-align: center;
-}
-
-.footer-info p {
-  font-size: 12px;
+.news-pubdate {
+  font-size: 14px;
   color: #888;
 }
 
-/* Custom styles */
-.news-container,
-.projects-container {
-  max-width: 800px;
+.footer-social a {
+  margin-right: 10px;
+}
+
+.footer-social a img {
+  width: 40px; /* Adjust this value to set the desired width */
+  height: 40px; /* Adjust this value to set the desired height */
+}
+#contact {
+  text-align: center;
+}
+
+.contact-container {
   margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
 }
 
-.news-container .search-container,
-.projects-container .search-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 20px;
+.contact-info {
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-.news-container .search-container input[type="text"],
-.projects-container .search-container input[type="text"] {
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-right: 5px;
+.contact-info p {
+  margin-bottom: 10px;
 }
 
-.news-container .search-container button,
-.projects-container .search-container button {
-  padding: 5px 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.contact-form {
+  /* Add your custom styling for the contact form if applicable */
 }
+.contact-details {
+  /* Existing styles for the contact details */
+}
+
+.social-buttons img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.projects-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section-content {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
