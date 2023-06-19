@@ -51,6 +51,7 @@ function fetchNews() {
               <h3 class="news-title"><a href="${link}">${title}</a></h3>
               <p class="news-description">${description}</p>
               <p class="news-pubdate">${pubDate}</p>
+              <p class="news-source">Source: UN Website</p> <!-- Added line for source -->
             </div>
           </div>
         `;
