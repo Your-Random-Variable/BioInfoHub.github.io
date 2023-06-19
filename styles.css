@@ -260,5 +260,7 @@ footer {
   nav ul li {
     flex: 0 0 auto;
     margin: 5px;
+    display: inline-block;
+    white-space: nowrap;
   }
 }
