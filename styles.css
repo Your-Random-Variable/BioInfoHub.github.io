@@ -159,7 +159,7 @@ footer {
 }
  #news-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
       background-color: #f9f9f9;
       padding: 20px;
@@ -251,3 +251,36 @@ footer {
   max-width: 700px;
 }
 
+/* Media Queries */
+@media (max-width: 767px) {
+  /* Styles for mobile devices */
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .header-logo {
+    max-width: 80px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-social a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
