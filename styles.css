@@ -33,7 +33,6 @@ header {
   align-items: center;
 }
 
-
 .header-container {
   display: flex;
   align-items: center;
@@ -157,36 +156,41 @@ footer {
 .footer-container p {
   margin: 0;
 }
+
 #news-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 20px;
   background-color: #f9f9f9;
   padding: 20px;
-  justify-items: center; /* Add this property to center align the news items */
 }
 
-    }
-
-    .news-item {
-      background-color: #f4f4f4;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+.news-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden; /* Add this property to hide any overflowing content */
+  padding-left: 10px;
 }
 
-    }
+.news-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  object-fit: contain; /* Adjust object-fit property to contain or cover based on preference */
+  transform: translateX(10px);
+}
 
-    .news-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .news-link {
-      color: #1e90ff;
-      text-decoration: none;
-    }
 .news-title {
   font-size: 20px;
   font-weight: bold;
@@ -196,18 +200,6 @@ footer {
 .news-pubdate {
   font-size: 14px;
   color: #888;
-}
-
-.footer-social a {
-  margin-right: 10px;
-}
-
-.footer-social a img {
-  width: 40px; /* Adjust this value to set the desired width */
-  height: 40px; /* Adjust this value to set the desired height */
-}
-#contact {
-  text-align: center;
 }
 
 .contact-container {
@@ -223,13 +215,7 @@ footer {
 
 .contact-info p {
   margin-bottom: 10px;
-}
-
-.contact-form {
-  /* Add your custom styling for the contact form if applicable */
-}
-.contact-details {
-  /* Existing styles for the contact details */
+  align-items: center;
 }
 
 .social-buttons img {
@@ -237,6 +223,7 @@ footer {
   height: 40px;
   margin-right: 10px;
 }
+
 .projects-container {
   text-align: center;
   padding: 20px;
@@ -251,20 +238,18 @@ footer {
   margin: 0 auto;
   max-width: 700px;
 }
-.news-image {
-  max-width: 100%;
-  max-height: 200px; /* Adjust this value as needed */
-  display: block;
-  margin: 0 auto;
-}
 
+.footer-social a img {
+  width: 40px; /* Adjust this value to set the desired width */
+  height: 40px; /* Adjust this value to set the desired height */
+}
 
 /* Styles for mobile devices */
 @media (max-width: 767px) {
   header {
     padding: 10px; /* Adjust the padding as needed */
   }
-  
+
   #news-container {
     grid-template-columns: repeat(1, 1fr); /* Display one news item per row */
   }
