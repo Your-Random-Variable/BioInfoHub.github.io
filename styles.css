@@ -73,7 +73,7 @@ nav ul li a {
 }
 
 nav ul li a {
-  font-size: 14px; /* Adjust the font size to your preference */
+  font-size: 16px; /* Adjust the font size to your preference */
 }
 
 nav ul li a:hover {
@@ -249,12 +249,16 @@ footer {
 }
 
 /* Styles for mobile devices */
+/* Add this CSS code to your styles.css file */
 @media (max-width: 767px) {
-  header {
-    padding: 10px; /* Adjust the padding as needed */
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  #news-container {
-    grid-template-columns: repeat(1, 1fr); /* Display one news item per row */
+  nav ul li {
+    flex: 0 0 auto;
+    margin: 5px;
   }
 }
