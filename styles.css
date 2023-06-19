@@ -157,33 +157,76 @@ footer {
 .footer-container p {
   margin: 0;
 }
-
-#news-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
-  background-color: #f9f9f9;
-  padding: 20px;
+ #news-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 20px;
+      background-color: #f9f9f9;
+      padding: 20px;
 }
 
-.news-item {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    }
+
+    .news-item {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
 }
 
+    }
+
+    .news-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .news-link {
+      color: #1e90ff;
+      text-decoration: none;
+    }
 .news-title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.news-link {
-  color: #1e90ff;
-  text-decoration: none;
+.news-pubdate {
+  font-size: 14px;
+  color: #888;
 }
 
+.footer-social a {
+  margin-right: 10px;
+}
+
+.footer-social a img {
+  width: 40px; /* Adjust this value to set the desired width */
+  height: 40px; /* Adjust this value to set the desired height */
+}
+#contact {
+  text-align: center;
+}
+
+.contact-container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.contact-info {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  /* Add your custom styling for the contact form if applicable */
+}
 .contact-details {
   /* Existing styles for the contact details */
 }
@@ -193,7 +236,6 @@ footer {
   height: 40px;
   margin-right: 10px;
 }
-
 .projects-container {
   text-align: center;
   padding: 20px;
@@ -209,97 +251,3 @@ footer {
   max-width: 700px;
 }
 
-/* Media Queries */
-@media (max-width: 767px) {
-  /* Styles for mobile devices */
-
-  header {
-    padding: 10px;
-  }
-
-  .header-logo {
-    max-width: 80px;
-  }
-
-  h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
-  }
-
-  .logo-slogan {
-    font-size: 16px;
-  }
-
-  nav ul li {
-    margin-right: 5px;
-  }
-
-  nav ul li a {
-    padding: 3px 5px;
-  }
-
-  main {
-    padding: 10px;
-  }
-
-  .about-container,
-  .offer-container,
-  .forum-container {
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-
-  .about-container h2,
-  .offer-container h2,
-  .forum-container h1 {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-
-  .forum-container p {
-    margin-bottom: 10px;
-  }
-
-  .forum-button {
-    padding: 5px 10px;
-  }
-
-  footer {
-    padding: 10px;
-  }
-
-  .footer-social a img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-  }
-
-  .news-item,
-  .contact-container {
-    padding: 10px;
-  }
-
-  .news-title {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-
-  .news-pubdate {
-    font-size: 12px;
-  }
-
-  .social-buttons img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-  }
-
-  .section-heading {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-
-  .section-content {
-    max-width: 500px;
-  }
-}
