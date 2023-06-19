@@ -250,6 +250,12 @@ footer {
   margin: 0 auto;
   max-width: 700px;
 }
+.news-image {
+  width: 80px; /* Adjust the width to your desired size */
+  height: 80px; /* Adjust the height to your desired size */
+}
+
+
 /* Styles for mobile devices */
 @media (max-width: 767px) {
   header {
