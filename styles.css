@@ -72,6 +72,10 @@ nav ul li a {
   color: #fff;
 }
 
+nav ul li a {
+  font-size: 14px; /* Adjust the font size to your preference */
+}
+
 nav ul li a:hover {
   background-color: #eee;
 }
