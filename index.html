@@ -12,16 +12,16 @@
       </div>
       <div class="title-container">
         <h1>BioInfoHub</h1>
-        <span class="logo-slogan">"Connecting Bioinformaticians, Empowering Discoveries!"</span>
+        <span class="logo-slogan">Connecting Bioinformaticians, Empowering Discoveries!</span>
       </div>
     </div>
     <nav>
       <ul>
-        <li><a onclick="showSection('home')">Home</a></li>
-        <li><a onclick="showSection('forum')">Forum</a></li>
-        <li><a href="#" onclick="showSection('newsSection')">News</a></li>
-        <li><a href="#" onclick="showSection('projectsSection')">Projects</a></li>
-        <li><a onclick="showSection('contact')">Contact Us</a></li>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('forum')">Forum</a></li>
+        <li><a href="#" onclick="showSection('news')">News</a></li>
+        <li><a href="#" onclick="showSection('project')">Projects</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
       </ul>
     </nav>
   </header>
@@ -50,43 +50,58 @@
     </section>
     <section id="forum">
       <div class="forum-container">
-        <h1>Forum</h1>
-        <div class="forum-description">
-          <p>Engage in meaningful discussions with bioinformaticians from around the world. Share your knowledge, seek advice, and connect with like-minded professionals in our vibrant community forum.</p>
-        </div>
-        <div class="join-container">
-          <a href="https://discord.gg/UTd7JH8Z" class="join-button" target="_blank">Join Community</a>
-        </div>
+        <h1>Join the BioInfoHub Forum</h1>
+        <p>Our forum is a vibrant space for bioinformaticians to discuss ideas, share knowledge, and seek assistance. Engage with fellow community members, ask questions, and contribute your expertise to help others.</p>
+        <a href="https://discord.gg/juvNfq42" class="forum-button">Visit the Forum</a>
       </div>
     </section>
-   <section id="newsSection">
-    <input id="searchInput" type="text" placeholder="Search news" />
-    <button onclick="searchNews()">Search</button>
-    <div id="newsContent"></div>
-  </section>
+    <section id="news">
+      <div id="news-container"></div>
+    </section>
+    <section id="projectsSection">
+      <!-- Projects section content here -->
+    </section>
+<section id="project">
+  <div class="projects-container">
+    <h2 class="section-heading">Projects</h2>
+    <div class="section-content">
+      <p>We are currently working on exciting projects! Stay tuned for updates.</p>
+      <p>We will notify you soon with more information about our projects and how you can get involved.</p>
+    </div>
+  </div>
+</section>
 
-  <section id="projectsSection">
-    <input id="searchInput" type="text" placeholder="Search projects" />
-    <button onclick="searchProjects()">Search</button>
-    <div id="projectsContent"></div>
-  </section>
-  </main>
-  
-  <footer>
-    <div class="footer-container">
-      <div class="footer-logo-container">
-        <img src="logo.png" alt="BioInfoHub Logo" class="footer-logo">
-      </div>
-      <div class="footer-social-links">
-        <a href="https://www.linkedin.com/company/bioinfohub" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
-        <a href="https://www.instagram.com/bioinfohub" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-        <a href="https://github.com/bioinfohub" target="_blank"><img src="github.png" alt="GitHub"></a>
+<section id="contact">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>For inquiries and further information, please reach out to us:</p>
+    <div class="contact-details">
+      <p>Email: <a href="mailto:bioinfohub2023@gmail.com">bioinfohub2023@gmail.com</a></p>
+      <p>Follow us on:</p>
+      <div class="social-buttons">
+        <a href="https://www.instagram.com/bioinfohub/" target="_blank" rel="noopener noreferrer">
+          <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/bioinfohub-b06a5a27b" target="_blank" rel="noopener noreferrer">
+          <img src="LinkedIn.png" alt="LinkedIn">
+        </a>
       </div>
     </div>
-    <div class="footer-info">
+  </div>
+</section>
+
+
+ <footer>
+    <div class="footer-container">
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/bioinfohub-b06a5a27b"><img src="LinkedIn.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/bioinfohub/"><img src="instagram.png" alt="Instagram"></a>
+      </div>
       <p>&copy; 2023 BioInfoHub. All rights reserved.</p>
     </div>
   </footer>
-<script src="script.js"></script>
+  
+  <script src="https://unpkg.com/rss-parser/dist/rss-parser.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
