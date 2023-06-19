@@ -157,54 +157,35 @@ footer {
 .footer-container p {
   margin: 0;
 }
- #news-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-      gap: 20px;
-      background-color: #f9f9f9;
-      padding: 20px;
+
+/* News Styles */
+#news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
 
-    }
-
-    .news-item {
-      background-color: #f4f4f4;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+.news-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
 }
 
-    }
-
-    .news-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .news-link {
-      color: #1e90ff;
-      text-decoration: none;
-    }
 .news-title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.news-pubdate {
-  font-size: 14px;
-  color: #888;
+.news-link {
+  color: #1e90ff;
+  text-decoration: none;
 }
 
-.footer-social a {
-  margin-right: 10px;
-}
-
-.footer-social a img {
-  width: 40px; /* Adjust this value to set the desired width */
-  height: 40px; /* Adjust this value to set the desired height */
-}
+/* Contact Styles */
 #contact {
   text-align: center;
 }
@@ -227,6 +208,7 @@ footer {
 .contact-form {
   /* Add your custom styling for the contact form if applicable */
 }
+
 .contact-details {
   /* Existing styles for the contact details */
 }
@@ -236,6 +218,8 @@ footer {
   height: 40px;
   margin-right: 10px;
 }
+
+/* Projects Styles */
 .projects-container {
   text-align: center;
   padding: 20px;
@@ -251,3 +235,54 @@ footer {
   max-width: 700px;
 }
 
+/* Media Queries for Mobile */
+@media (max-width: 767px) {
+  header {
+    padding: 10px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .header-logo {
+    max-width: 80px;
+  }
+
+  .title-container {
+    text-align: left;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .about-container,
+  .offer-container,
+  .forum-container {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+}
+
+/* Media Queries for Tablets and Desktop */
+@media (min-width: 768px) {
+  /* Adjust the styles for tablets and desktop devices here */
+}
