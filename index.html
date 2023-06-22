@@ -19,8 +19,10 @@
       <ul>
         <li><a href="#" onclick="showSection('home')">Home</a></li>
         <li><a href="#" onclick="showSection('forum')">Forum</a></li>
-        <li><a href="#" onclick="showSection('news')">News</a></li>
+        <li><a href="#" onclick="showSection('tools')">Tools</a></li>
+        <li><a href="#" onclick="showSection('news')">News</a></li> 
         <li><a href="#" onclick="showSection('project')">Projects</a></li>
+        
         <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
       </ul>
     </nav>
@@ -52,11 +54,14 @@
       <div class="forum-container">
         <h1>Join the BioInfoHub Forum</h1>
         <p>Our forum is a vibrant space for bioinformaticians to discuss ideas, share knowledge, and seek assistance. Engage with fellow community members, ask questions, and contribute your expertise to help others.</p>
-        <a href="https://t.me/+IDTY7CjbskBmZTg9" class="forum-button">Visit the Forum</a>
+        <a href="https://discord.gg/juvNfq42" class="forum-button">Visit the Forum</a>
       </div>
     </section>
     <section id="news">
       <div id="news-container"></div>
+    </section>
+    <section id="projectsSection">
+      <!-- Projects section content here -->
     </section>
 <section id="project">
   <div class="projects-container">
@@ -67,7 +72,67 @@
     </div>
   </div>
 </section>
-
+<section id="tools">
+      <div class="tools-container">
+        <h2 class="section-heading">Bioinformatics Tools</h2>
+        <div class="section-content">
+          <h3>Genomics Tools</h3>
+          <ul>
+            <li><a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">BLAST</a> - (Basic Local Alignment Search Tool) A tool for sequence similarity searches against a database of nucleotide or protein sequences.</li>
+             <li><a href="http://bowtie-bio.sourceforge.net/index.shtml" target="_blank">Bowtie</a> - A fast and memory-efficient tool for aligning sequencing reads to reference genomes.</li>
+             <li><a href="http://www.htslib.org/" target="_blank">SAMtools</a> - A suite of utilities for manipulating and analyzing SAM/BAM format alignment files.</li>
+            <li><a href="https://genome.ucsc.edu/" target="_blank">Genome Browser</a> - A tool for visualizing and exploring genomic data, including gene annotations, genetic variants, and other genomic features. </li> 
+            <li><a href="https://galaxyproject.org/" target="_blank">Galaxy</a> -  An open-source, web-based platform for data-intensive biomedical research, including genomics analysis workflows. </li>
+            <li><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank">FastQC</a> -  A quality control tool for high-throughput sequence data, providing detailed reports on sequence quality metrics. </li>
+            <li><a href="https://github.com/trinityrnaseq/trinityrnaseq/wiki" target="_blank">Trinity</a> -  A software package for de novo reconstruction of transcriptomes from RNA-seq data. </li>
+            <li><a href="https://software.broadinstitute.org/software/igv/" target="_blank">IGV (Integrative Genomics Viwer)</a> - A high-performance visualization tool for interactive exploration of large genomic datasets.</li>
+            <li><a href="https://broadinstitute.github.io/picard/" target="_blank">Picard</a> - Picard is a Java-based toolkit for manipulating and analyzing next-generation sequencing data files (SAM/BAM/CRAM). It offers a wide range of utilities for processing and quality control of sequencing data.</li>
+           <li><a href="https://www.ensembl.org/" target="_blank">Ensembl</a> - Ensembl is a genome browser and annotation database that provides access to various genomes, gene annotations, and functional genomics data. It allows you to explore gene structures, variations, and regulatory elements.</li>
+          </ul>
+          
+          <h3>Transcriptomics Tools</h3>
+          <ul>
+            <li><a href="https://bioconductor.org/packages/release/bioc/html/DESeq2.html" target="_blank">DESeq2</a> - A widely used R/Bioconductor package for differential gene expression analysis from RNA-seq data.</li>
+            <li><a href="http://cole-trapnell-lab.github.io/cufflinks/" target="_blank">Cufflinks</a> - A suite of tools for transcriptome assembly, differential gene expression, and transcript abundance estimation from RNA-Seq data.</li>
+           <li><a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html" target="_blank">edgeR</a> - A bioconductor package for differential expression analysis of RNA-seq data, using empirical Bayes estimation.</li>
+           <li><a href="https://salmon.readthedocs.io/" target="_blank">Salmon</a> - A tool for quantifying transcript abundance from RNA-seq data, providing fast and accurate transcript-level quantification.</li>
+           <li><a href="https://ccb.jhu.edu/software/stringtie/" target="_blank">StringTie</a> - A software package for transcript assembly and quantification of RNA-seq data.</li>
+           <li><a href="https://www.bioconductor.org/packages/release/bioc/html/ballgown.html" target="_blank">Ballgown</a> - A software package for differential expression analysis and visualization of RNA-seq data.</li>
+           <li><a href="https://github.com/alexdobin/STAR" target="_blank">STAR</a> - A fast and accurate RNA-seq aligner, suitable for both transcriptome and whole-genome alignment.</li>
+           <li><a href="http://www.usadellab.org/cms/?page=trimmomatic" target="_blank">Trimmomatic</a> - A tool for trimming and filtering sequencing reads based on quality scores. It helps remove low-quality bases, adapter sequences, and other artifacts. </li>
+          </ul>
+          
+          
+          <h3>Metabolomics Tools</h3>
+          <ul>
+            <li><a href="https://cytoscape.org/" target="_blank">Cytoscape</a> - Although not specific to metabolomics, Cytoscape is a powerful software platform widely used for network visualization and analysis. It can be employed to integrate and analyze metabolomics data in the context of biological networks, such as metabolic pathways or protein-protein interactions. Cytoscape supports various plugins that provide additional functionalities for metabolomics data analysis.</li>
+            <li><a href="https://www.msea.ca/" target="_blank">MSEA (Metabolite Set Enrichment Analysis)</a> - MSEA is a web-based tool for pathway analysis and metabolite set enrichment analysis. It helps in understanding the biological context of metabolomics data by identifying overrepresented metabolic pathways and functional modules.</li>
+              <li><a href="http://mzmine.github.io/" target="_blank">MZmine</a> - An open-source software for processing and visualization of mass spectrometry-based metabolomics data. It offers a variety of modules for peak detection, alignment, quantitation, and identification.</li>
+           </ul>
+          
+          <h3>Proteomics Tools</h3>
+          <ul>
+            <li><a href="https://www.rcsb.org/" target="_blank">Protein Data Bank (PDB)</a> - An archive of experimentally determined three-dimensional protein structures, allowing for structure visualization and analysis.</li>
+            <li><a href="https://www.uniprot.org/" target="_blank">UniProt</a> - UniProt is a comprehensive protein sequence and functional information resource. It provides access to a large collection of protein sequences and annotations.</li>
+            <li><a href="https://www.expasy.org/" target="_blank">Expasy Proteomics Tools</a> - Expasy is a collection of bioinformatics tools for proteomics data analysis. It includes tools for protein identification, characterization, post-translational modifications, and more.</li>
+            <li><a href="https://www.expasy.org/spdbv/" target="_blank">Swiss-PdbViewer (DeepView)</a> - A molecular visualization and analysis tool for protein structures. It allows interactive manipulation, analysis, and visualization of protein structures.</li>
+            <li><a href="https://pymol.org/" target="_blank">PyMOL</a> - A powerful molecular graphics system that enables visualization, analysis, and rendering of protein structures. It offers a wide range of features and scripting capabilities.</li>
+            <li><a href="https://string-db.org/" target="_blank">STRING</a> -  A database and web resource that provides information about protein-protein interactions, functional associations, and networks. It integrates data from various sources and offers visualization tools.</li>
+           <li><a href="https://david.ncifcrf.gov/" target="_blank">DAVID</a> -  DAVID (Database for Annotation, Visualization, and Integrated Discovery) is a web-based tool for functional annotation and enrichment analysis of proteins. It helps in identifying enriched biological themes, functional annotations, and pathway analysis for a given set of proteins.</li>
+   
+          </ul>
+          
+          <h3>Programming Tools</h3>
+          <ul>
+            <li><a href="https://www.r-project.org/" target="_blank">R</a> -  R is a powerful statistical programming language widely used in bioinformatics. It provides numerous packages and libraries for data analysis, visualization, and statistical modeling.</li>
+           <li><a href="https://www.bioconductor.org/" target="_blank">Bioconductor</a> -  R is a powerful statistical programming language widely used in bioinformatics. It provides numerous packages and libraries for data analysis, visualization, and statistical modeling.</li>
+          <li><a href="https://biopython.org/" target="_blank">Biopython</a> -  Biopython is a collection of freely available Python tools for computational biology and bioinformatics. It provides modules for sequence manipulation, protein analysis, file parsing, and much more.</li>
+          <li><a href="https://bioperl.org/" target="_blank">BioPerl</a> -  BioPerl is a collection of Perl modules and libraries for bioinformatics tasks. It offers a comprehensive set of modules for sequence analysis, file parsing, database access, and other bioinformatics-related tasks.</li>
+           
+          </ul>
+        </div>
+      </div>
+    </section>
 <section id="contact">
   <div class="contact-container">
     <h2>Contact Us</h2>
