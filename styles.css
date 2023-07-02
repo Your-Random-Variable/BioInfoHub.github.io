@@ -285,7 +285,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
+section:not(#home) {
+  display: none;
+}
 /* Styles for mobile devices */
 @media (max-width: 767px) {
   header {
