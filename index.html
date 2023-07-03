@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>BioInfoHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
         <li><a href="#" onclick="showSection('news')">News</a></li> 
         <li><a href="#" onclick="showSection('project')">Projects</a></li>
         
-        <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+        <li><a href="#" onclick="showSection('contact')"class="fab">Contact Us</a></li>
       </ul>
     </nav>
   </header>
@@ -54,7 +55,7 @@
       <div class="forum-container">
         <h1>Join the BioInfoHub Forum</h1>
         <p>Our forum is a vibrant space for bioinformaticians to discuss ideas, share knowledge, and seek assistance. Engage with fellow community members, ask questions, and contribute your expertise to help others.</p>
-        <a href="https://t.me/+IDTY7CjbskBmZTg9" class="forum-button">Visit the Forum</a>
+        <a href="https://discord.gg/juvNfq42" class="forum-button">Visit the Forum</a>
       </div>
     </section>
     <section id="news">
@@ -108,7 +109,6 @@
             <li><a href="https://cytoscape.org/" target="_blank">Cytoscape</a> - Although not specific to metabolomics, Cytoscape is a powerful software platform widely used for network visualization and analysis. It can be employed to integrate and analyze metabolomics data in the context of biological networks, such as metabolic pathways or protein-protein interactions. Cytoscape supports various plugins that provide additional functionalities for metabolomics data analysis.</li>
             <li><a href="https://www.msea.ca/" target="_blank">MSEA (Metabolite Set Enrichment Analysis)</a> - MSEA is a web-based tool for pathway analysis and metabolite set enrichment analysis. It helps in understanding the biological context of metabolomics data by identifying overrepresented metabolic pathways and functional modules.</li>
               <li><a href="http://mzmine.github.io/" target="_blank">MZmine</a> - An open-source software for processing and visualization of mass spectrometry-based metabolomics data. It offers a variety of modules for peak detection, alignment, quantitation, and identification.</li>
-              <li><a href="https://meme-suite.org/" target="_blank">MEME Suite</a> - The MEME Suite is widely used in the field of bioinformatics and computational biology for identifying and studying regulatory elements, transcription factor binding sites, and other important sequence motifs. The web-based interface of the MEME Suite makes it accessible to researchers without requiring them to install the tools locally.</li>
            </ul>
           
           <h3>Proteomics Tools</h3>
@@ -122,18 +122,7 @@
            <li><a href="https://david.ncifcrf.gov/" target="_blank">DAVID</a> -  DAVID (Database for Annotation, Visualization, and Integrated Discovery) is a web-based tool for functional annotation and enrichment analysis of proteins. It helps in identifying enriched biological themes, functional annotations, and pathway analysis for a given set of proteins.</li>
    
           </ul>
-          <h3>CADD(Computer Aided Drug Designing)</h3>
-          <ul>
-            <li><a href="http://autodock.scripps.edu/resources/adt" target="_blank">AutoDock Tools</a> - AutoDock Tools is a graphical user interface (GUI) used for preparing and analyzing molecules for molecular docking simulations. It is commonly used in conjunction with AutoDock, a popular molecular docking software. AutoDock Tools allows users to visualize and manipulate ligands and receptors, set up docking parameters, and analyze the results.</li>
-            <li><a href="http://vina.scripps.edu/" target="_blank">AutoDock Vina</a> - AutoDock Vina is a molecular docking program that is based on the AutoDock algorithm. It is used for predicting the binding affinity and orientation of small molecules (ligands) to a target protein (receptor). AutoDock Vina provides a command-line interface and is known for its speed and accuracy.</li>
-           <li><a href="http://pyrx.sourceforge.net/" target="_blank">PyRx</a> - PyRx (Python Prescription) is a virtual screening software that integrates various open-source tools and provides a user-friendly interface for molecular docking studies. It uses AutoDock Vina as the default docking engine and allows users to prepare, dock, and analyze small molecules against target proteins.</li>
-           <li><a href="http://www.gromacs.org/" target="_blank">GROMACS</a> - GROMACS (Groningen Machine for Chemical Simulations) is a versatile molecular dynamics simulation package widely used in computational chemistry and biophysics. It allows researchers to study the motion and behavior of biomolecules, such as proteins and lipids, at the atomic level. GROMACS provides powerful simulation algorithms and analysis tools.</li>
-           <li><a href="https://www.swissadme.ch/" target="_blank">SwissADME</a> - SwissADME is a web-based tool for predicting the pharmacokinetic and physicochemical properties of small molecules. It provides insights into drug-likeness, solubility, lipophilicity, and other important properties that influence the absorption, distribution, metabolism, and excretion (ADME) of potential drug candidates.</li>
-           <li><a href="https://plasma-gate.weizmann.ac.il/Grace/" target="_blank">Grace</a> - Grace (Graphing, Advanced Computation, and Exploration) is a plotting tool used for data visualization and analysis. It provides a wide range of features to create publication-quality graphs, including 2D and 3D plots, mathematical functions, curve fitting, and data manipulation. Grace is often used in scientific research and data analysis.</li>
-           <li><a href="http://openbabel.org/" target="_blank">Open Babel</a> - Open Babel is an open-source chemical toolbox designed to speak the many languages of chemical data. It allows users to convert, analyze, and manipulate chemical file formats. Open Babel supports a wide range of chemical file formats and provides a command-line interface as well as a programming API.</li>
-           <li><a href="https://www.rbvi.ucsf.edu/chimerax/" target="_blank">ChimeraX</a> - ChimeraX is a next-generation molecular visualization program developed by the UCSF Chimera team. It allows users to visualize and analyze molecular structures and complexes in 3D. ChimeraX supports a wide range of molecular file formats and provides advanced visualization features, including interactive model manipulation and virtual reality support. </li>
-          <li><a href="https://www.knime.com/" target="_blank">KNIME</a> - KNIME is an open-source data analytics platform that provides a graphical interface for building data workflows. While not specifically designed for CADD, KNIME can be used to create pipelines for data preprocessing, feature extraction, and machine learning, which are commonly employed in CADD studies. KNIME supports integration with various CADD tools and libraries. </li>
-          </ul>
+          
           <h3>Programming Tools</h3>
           <ul>
             <li><a href="https://www.r-project.org/" target="_blank">R</a> -  R is a powerful statistical programming language widely used in bioinformatics. It provides numerous packages and libraries for data analysis, visualization, and statistical modeling.</li>
@@ -145,6 +134,30 @@
         </div>
       </div>
     </section>
+<!-- Testimonials -->
+<section id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial-slide">
+      <blockquote>
+        "Great service! They delivered exactly what I needed on time."
+      </blockquote>
+      <cite>- John Doe</cite>
+    </div>
+    <div class="testimonial-slide">
+      <blockquote>
+        "Highly recommended! Professional and reliable team."
+      </blockquote>
+      <cite>- Jane Smith</cite>
+    </div>
+    <!-- Add more testimonial slides as needed -->
+  </div>
+  <div class="slider-navigation">
+    <button class="prev-btn" onclick="changeSlide(-1)">&#8249;</button>
+    <button class="next-btn" onclick="changeSlide(1)">&#8250;</button>
+  </div>
+</section>
+
 <section id="contact">
   <div class="contact-container">
     <h2>Contact Us</h2>
