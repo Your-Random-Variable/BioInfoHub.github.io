@@ -322,20 +322,6 @@ section:not(#home) {
     max-width: 100%;
     height: auto;
   }
-}
-
-/* Adjust layout for mobile devices with screen size around 6-7 inches (360x414 pixels) */
-@media (max-width: 414px) {
-  body {
-    font-size: 12px;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  .news-img {
-    max-width: 50%;
-    height: auto;
-  }
   .header-container {
     flex-direction: column;
     align-items: center;
@@ -353,7 +339,37 @@ section:not(#home) {
   .offer-container ul {
     columns: 1;
   }
+  .news-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .news-image {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .news-content {
+    margin-top: 10px;
+  }
+
+  .news-title {
+    font-size: 18px;
+  }
+
+  .news-description {
+    font-size: 14px;
+  }
+
+  .news-pubdate,
+  .news-source {
+    font-size: 12px;
+  }
 }
+
 /* Increase engagement */
 
 /* Add hover effects to navigation links */
