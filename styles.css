@@ -333,7 +333,7 @@ section:not(#home) {
     font-size: 20px;
   }
   .news-img {
-    max-width: 80%;
+    max-width: 50%;
     height: auto;
   }
   .header-container {
