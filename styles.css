@@ -324,37 +324,34 @@ section:not(#home) {
   }
 }
 
-/* Adjust layout for smaller screens */
-@media (max-width: 480px) {
+/* Adjust layout for mobile devices with screen size around 6-7 inches (360x414 pixels) */
+@media (max-width: 414px) {
+  body {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .news-img {
+    max-width: 80%;
+    height: auto;
+  }
   .header-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
   .logo-container {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   .title-container {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
   .offer-container {
-    padding: 10px;
+    padding: 16px;
   }
   .offer-container ul {
     columns: 1;
-  }
-  .news-container {
-    padding: 10px;
-  }
-  .news-container .news-item {
-    margin-bottom: 10px;
-  }
-  .news-container .news-item .news-img {
-    max-width: 100%;
-    height: auto;
-  }
-  .news-container .news-item .news-content {
-    font-size: 14px;
   }
 }
 /* Increase engagement */
