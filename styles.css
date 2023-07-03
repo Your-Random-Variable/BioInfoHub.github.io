@@ -318,6 +318,10 @@ section:not(#home) {
   h1 {
     font-size: 24px;
   }
+  .news-img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Adjust layout for smaller screens */
@@ -334,13 +338,25 @@ section:not(#home) {
     margin-bottom: 20px;
   }
   .offer-container {
-    padding: 20px;
+    padding: 10px;
   }
   .offer-container ul {
     columns: 1;
   }
+  .news-container {
+    padding: 10px;
+  }
+  .news-container .news-item {
+    margin-bottom: 10px;
+  }
+  .news-container .news-item .news-img {
+    max-width: 100%;
+    height: auto;
+  }
+  .news-container .news-item .news-content {
+    font-size: 14px;
+  }
 }
-
 /* Increase engagement */
 
 /* Add hover effects to navigation links */
