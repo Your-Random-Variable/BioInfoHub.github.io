@@ -311,34 +311,8 @@ section:not(#home) {
 /* Responsive styles */
 
 /* Adjust font sizes for smaller screens */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  .news-img {
-    max-width: 100%;
-    height: auto;
-  }
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .logo-container {
-    margin-bottom: 8px;
-  }
-  .title-container {
-    margin-bottom: 14px;
-  }
-  .offer-container {
-    padding: 16px;
-  }
-  .offer-container ul {
-    columns: 1;
-  }
+
+ @media (max-width: 767px) {
   .news-item {
     display: flex;
     flex-direction: column;
@@ -346,30 +320,39 @@ section:not(#home) {
   }
 
   .news-image {
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
     margin-bottom: 10px;
   }
 
   .news-content {
-    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
   }
 
   .news-title {
     font-size: 18px;
+    margin-bottom: 5px;
   }
 
   .news-description {
     font-size: 14px;
+    margin-bottom: 10px;
   }
 
-  .news-pubdate,
+  .news-pubdate {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+
   .news-source {
     font-size: 12px;
+    color: #777;
+    margin-bottom: 0;
   }
 }
-
 /* Increase engagement */
 
 /* Add hover effects to navigation links */
