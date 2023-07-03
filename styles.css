@@ -134,6 +134,24 @@ main {
 .forum-button:hover {
   background-color: #555;
 }
+/* Floating action button styles */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff9900;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.fab:hover {
+  background-color: #ffba4d;
+}
+
 
 /* Footer Styles */
 footer {
@@ -288,40 +306,61 @@ a:hover {
 section:not(#home) {
   display: none;
 }
-/* Styles for mobile devices */
-@media (max-width: 767px) {
-  header {
-    padding: 10px; /* Adjust the padding as needed */
-  }
 
-  #news-container {
-    grid-template-columns: repeat(1, 1fr); /* Display one news item per row */
-  }
 
-  /* Additional mobile styles for the "tools" section */
-  .tools-container {
-    padding: 10px;
-  }
+/* Responsive styles */
 
-  .section-heading {
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
-
-  .section-content {
-    margin-bottom: 16px;
-  }
-
-  h3 {
+/* Adjust font sizes for smaller screens */
+@media (max-width: 768px) {
+  body {
     font-size: 16px;
-    margin-bottom: 8px;
   }
-
-  ul {
-    padding-left: 16px;
+  h1 {
+    font-size: 24px;
   }
+}
 
-  ul li {
-    margin-bottom: 4px;
+/* Adjust layout for smaller screens */
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logo-container {
+    margin-bottom: 10px;
+  }
+  .title-container {
+    margin-bottom: 20px;
+  }
+  .offer-container {
+    padding: 20px;
+  }
+  .offer-container ul {
+    columns: 1;
+  }
+}
+
+/* Increase engagement */
+
+/* Add hover effects to navigation links */
+nav ul li a:hover {
+  color: #ff9900;
+}
+
+/* Add animation to the forum button */
+.forum-button {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
