@@ -7,7 +7,7 @@
 
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;  
   font-size: 16px;
   line-height: 1.6;
   color: #333;
@@ -31,6 +31,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s ease; /* Add a transition for smoother background color change */
 }
 
 .header-container {
@@ -40,6 +41,7 @@ header {
 
 .logo-container {
   margin-right: 20px;
+  transition: opacity 0.3s ease; /* Add a transition for smoother opacity change */
 }
 
 .header-logo {
@@ -48,6 +50,7 @@ header {
 
 .title-container {
   text-align: center;
+  transition: transform 0.3s ease; /* Add a transition for smoother transform change */
 }
 
 h1 {
@@ -63,17 +66,19 @@ h1 {
 nav ul li {
   display: inline-block;
   margin-right: 10px;
+  transition: transform 0.3s ease; /* Add a transition for smoother transform change */
 }
 
 nav ul li a {
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
-  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transitions for background color and text color change */
+  color: #333;
 }
 
 nav ul li a:hover {
   background-color: #eee;
+  color: #ff9900;
 }
 
 nav ul li a:active {
@@ -128,12 +133,14 @@ main {
   background-color: #333;
   color: #fff;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transitions for background color and transform change */
 }
 
 .forum-button:hover {
   background-color: #555;
+  transform: scale(1.05); /* Add a scale transform on hover for a subtle animation */
 }
+
 /* Floating action button styles */
 .fab {
   position: fixed;
@@ -146,12 +153,13 @@ main {
   text-decoration: none;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 999;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transitions for background color and transform change */
 }
 
 .fab:hover {
   background-color: #ffba4d;
+  transform: scale(1.05); /* Add a scale transform on hover for a subtle animation */
 }
-
 
 /* Footer Styles */
 footer {
@@ -207,6 +215,7 @@ footer {
   margin-bottom: 15px;
   object-fit: contain; /* Adjust object-fit property to contain or cover based on preference */
   transform: translateX(10px);
+  transition: transform 0.3s ease; /* Add a transition for smoother transform change */
 }
 
 .news-title {
@@ -303,58 +312,57 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 section:not(#home) {
   display: none;
 }
-
 
 /* Responsive styles */
 
 /* Adjust font sizes for smaller screens */
 @media (max-width: 767px) {
   .news-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .news-image {
+    flex: 0 0 120px;
+    margin-right: 20px;
+  }
+
+  .news-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .news-content {
+    flex: 1;
+  }
+
+  .news-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .news-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .news-pubdate {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .news-source {
+    font-size: 12px;
+    color: gray;
+  }
 }
 
-.news-image {
-  flex: 0 0 120px;
-  margin-right: 20px;
-}
-
-.news-image img {
-  width: 100%;
-  height: auto;
-}
-
-.news-content {
-  flex: 1;
-}
-
-.news-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.news-description {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.news-pubdate {
-  font-size: 12px;
-  color: gray;
-}
-
-.news-source {
-  font-size: 12px;
-  color: gray;
-}
-}
-
- 
 /* Increase engagement */
 
 /* Add hover effects to navigation links */
@@ -371,10 +379,91 @@ nav ul li a:hover {
   0% {
     transform: scale(1);
   }
-  50% {
+   50% {
     transform: scale(1.1);
   }
   100% {
     transform: scale(1);
   }
+}
+
+/* Add fade-in animation for header elements */
+header {
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Update color scheme */
+
+body {
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #333;
+}
+
+.header-container {
+  transition: opacity 0.3s ease; /* Add a transition for smoother opacity change */
+}
+
+nav ul li a {
+  color: #fff;
+}
+
+nav ul li a:hover {
+  background-color: #ff9900;
+  color: #fff;
+}
+
+.forum-button {
+  background-color: #ff9900;
+  color: #fff;
+}
+
+.forum-button:hover {
+  background-color: #ffba4d;
+}
+
+.fab {
+  background-color: #ff9900;
+  color: #fff;
+}
+
+.fab:hover {
+  background-color: #ffba4d;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+}
+
+.footer-social a {
+  color: #fff;
+}
+
+.contact-info p {
+  color: #333;
+}
+
+.section-heading {
+  color: #333;
+}
+
+a {
+  color: #337ab7;
+}
+
+a:hover {
+  color: #ff9900;
 }
