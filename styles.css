@@ -358,20 +358,17 @@ section:not(#home) {
 .hidden {
   display: none;
 }
-.read-more-btn {
-  background-color: #f0f0f0;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
+.read-more-btn.orange {
+  background-color: orange; /* Set the background color to orange */
   color: #fff;
   font-weight: bold;
-  background-color: blue; /* Set the background color to blue */
   transition: background-color 0.3s ease;
 }
 
-.read-more-btn:hover {
-  background-color: #333; /* Change the hover background color */
+.read-more-btn.orange:hover {
+  background-color: #e05900; /* Change the hover background color */
 }
+
 
 /* Responsive styles */
 
