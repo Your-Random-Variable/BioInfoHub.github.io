@@ -64,3 +64,13 @@ function fetchNews() {
       newsContainer.innerHTML = 'Failed to fetch news.';
     });
 }
+function toggleBlogDetails(button) {
+  const blogPost = button.closest('.blog-post');
+  const blogDetails = blogPost.querySelector('.blog-details');
+  const blogImage = blogPost.querySelector('.blog-image');
+
+  blogDetails.classList.toggle('hidden');
+  blogImage.classList.toggle('expanded');
+  button.textContent = blogDetails.classList.contains('hidden') ? 'Read More' : 'Read Less';
+}
+
