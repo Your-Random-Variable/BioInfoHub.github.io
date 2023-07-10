@@ -316,6 +316,48 @@ a:hover {
 section:not(#home) {
   display: none;
 }
+.blog-post {
+  display: flex;
+  flex-direction: column; /* Change flex-direction to column */
+  margin-bottom: 20px;
+}
+
+.blog-image {
+  width: 200px; /* Adjust the size as needed */
+  margin-right: 20px;
+  transition: width 0.3s ease;
+}
+
+.blog-image.expanded {
+  width: 100%; /* Expand the width to fill the available space */
+}
+
+.blog-description {
+  margin-top: auto; /* Move the text to the bottom */
+}
+
+.blog-details {
+  margin-top: 10px;
+}
+
+.read-more-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #ddd;
+}
+
+/* Hide the blog details initially */
+.hidden {
+  display: none;
+}
 
 /* Responsive styles */
 
