@@ -334,6 +334,7 @@ section:not(#home) {
 
 .blog-description {
   margin-top: auto; /* Move the text to the bottom */
+  text-align: justify;
 }
 
 .blog-details {
