@@ -97,10 +97,71 @@
           <button class="read-more-btn" onclick="toggleBlogDetails(this)">Read More</button>
         </div>
       </div>
+      <div class="blog-post">
+        <img src="Bioinformatics.png" alt="Bioinformatics Image" class="blog-image">
+        <div class="blog-description">
+          <h3>Manhattan Distance in Gene Expression Analysis</h3>
+          <p><strong>Written by Piyush Kumar</strong></p>
+          <p><strong>Date: August 11, 2023</strong></p>
+          <p> Manhattan Distance is a way to measure the "distance" between two points in a grid-like space, just like navigating through the streets of Manhattan. It's also known as L1 distance or taxicab distance.</p>
+          <div class="blog-details hidden">
+           <p>Manhattan Distance is widely used in bioinformatics to analyze and compare biological data, especially in genomics and gene expression studies. One common application is in the analysis of microarray data.</p>
+            <h2>Example: Comparing Gene Expression Patterns</h2>
+
+<p>Imagine we have a dataset containing the expression levels of three genes (A, B, and C) in four different tissue samples (Tissue 1, Tissue 2, Tissue 3, and Tissue 4). The gene expression levels are measured as numerical values.</p>
+
+<table border="1">
+    <tr>
+        <th>Gene</th>
+        <th>Tissue 1</th>
+        <th>Tissue 2</th>
+        <th>Tissue 3</th>
+        <th>Tissue 4</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>5</td>
+        <td>3</td>
+        <td>9</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>2</td>
+        <td>6</td>
+        <td>4</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>1</td>
+        <td>5</td>
+        <td>3</td>
+        <td>7</td>
+    </tr>
+</table>
+
+<h3>Calculating Manhattan Distance:</h3>
+<p>For gene A: Manhattan Distance = |3 - 5| + |5 - 3| = 2 + 2 = 4</p>
+<p>For gene B: Manhattan Distance = |6 - 2| + |5 - 3| = 4 + 2 = 6</p>
+<p>For gene C: Manhattan Distance = |5 - 1| + |5 - 3| = 4 + 2 = 6</p>
+
+<h3>Interpretation:</h3>
+<p>The Manhattan Distance values for each gene between Tissue 1 and Tissue 2 are as follows:</p>
+<ul>
+    <li>Gene A: 4</li>
+    <li>Gene B: 6</li>
+    <li>Gene C: 6</li>
+</ul>
+<p>Lower Manhattan Distance values indicate a higher similarity in gene expression patterns. In this example, we can see that Gene A has the lowest Manhattan Distance of 4, indicating that its expression pattern is more similar between Tissue 1 and Tissue 2 compared to the other two genes. On the other hand, Gene B and Gene C both have a Manhattan Distance of 6, suggesting that their expression patterns are less similar between the two tissue samples.</p>
+<p>By calculating the Manhattan Distance for each gene, we gained insights into the similarities and differences in gene expression, helping us understand the underlying biology and potential relationships between the tissues.</p>
+          </div>
+          <button class="read-more-btn" onclick="toggleBlogDetails(this)">Read More</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
 <section id="tools">
       <div class="tools-container">
         <h2 class="section-heading">Bioinformatics Tools</h2>
