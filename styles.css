@@ -11,6 +11,8 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
+  transition: background-color 0.3s ease; /* Add a transition for smoother background color change */
+  overflow-x: hidden;
 }
 
 a {
@@ -520,4 +522,26 @@ a {
 
 a:hover {
   color: #ff9900;
+}
+/* Add page transition */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
