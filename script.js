@@ -2,12 +2,19 @@ function showSection(sectionId) {
   // Hide all sections
   const sections = document.querySelectorAll('section');
   sections.forEach(section => {
+    section.classList.remove('page-transition-enter-active');
     section.style.display = 'none';
   });
 
   // Show the selected section
   const selectedSection = document.getElementById(sectionId);
   selectedSection.style.display = 'block';
+  selectedSection.classList.add('page-transition-enter-active');
+
+  // Remove the class after the transition ends
+  selectedSection.addEventListener('transitionend', () => {
+    selectedSection.classList.remove('page-transition-enter-active');
+  });
 
   // Update the active link in the navigation
   const navLinks = document.querySelectorAll('nav ul li a');
@@ -23,7 +30,6 @@ function showSection(sectionId) {
     fetchNews();
   }
 }
-
 function fetchNews() {
   const newsContainer = document.getElementById('news-container');
   newsContainer.innerHTML = 'Loading news...';
