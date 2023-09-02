@@ -1,13 +1,27 @@
 function showSection(sectionId) {
-  // Hide all sections
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-    section.style.display = 'none';
-  });
+  const currentSection = document.querySelector('section:not(.hidden)');
 
-  // Show the selected section
+  // Check if the current section is the same as the new one
+  if (currentSection && currentSection.id === sectionId) {
+    return;
+  }
+
+  // Hide the current section with a fade-out effect
+  if (currentSection) {
+    currentSection.classList.add('page-transition-exit');
+    currentSection.addEventListener('transitionend', () => {
+      currentSection.classList.add('hidden');
+      currentSection.classList.remove('page-transition-exit', 'page-transition-exit-active');
+    });
+  }
+
+  // Show the new section with a fade-in effect
   const selectedSection = document.getElementById(sectionId);
-  selectedSection.style.display = 'block';
+  selectedSection.classList.remove('hidden');
+  selectedSection.classList.add('page-transition-enter');
+  setTimeout(() => {
+    selectedSection.classList.add('page-transition-enter-active');
+  }, 10);
 
   // Update the active link in the navigation
   const navLinks = document.querySelectorAll('nav ul li a');
@@ -23,6 +37,7 @@ function showSection(sectionId) {
     fetchNews();
   }
 }
+
 
 function fetchNews() {
   const newsContainer = document.getElementById('news-container');
