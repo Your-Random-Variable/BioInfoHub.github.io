@@ -523,26 +523,14 @@ a {
 a:hover {
   color: #ff9900;
 }
-/* Add page transition styles */
-.page-transition-exit {
+/* Add page transition */
+section {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.page-transition-exit-active {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.page-transition-enter {
-  opacity: 0;
-  transform: translateY(20px);
 }
 
 .page-transition-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
