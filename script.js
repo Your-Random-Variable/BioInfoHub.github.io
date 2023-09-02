@@ -73,4 +73,40 @@ function toggleBlogDetails(button) {
   blogImage.classList.toggle('expanded');
   button.textContent = blogDetails.classList.contains('hidden') ? 'Read More' : 'Read Less';
 }
+// Define a function to handle page transitions
+function transitionToSection(sectionId) {
+  // Add a class to initiate the page transition
+  document.body.classList.add('page-transition-exit');
+  
+  // Wait for the exit transition to complete
+  setTimeout(() => {
+    // Hide all sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.style.display = 'block';
+
+    // Update the active link in the navigation
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+
+    const selectedNavLink = document.querySelector(`nav ul li a[onclick="transitionToSection('${sectionId}')"]`);
+    selectedNavLink.classList.add('active');
+
+    // Fetch and display news if the section is the "News" section
+    if (sectionId === 'news') {
+      fetchNews();
+    }
+
+    // Remove the exit transition class to trigger the enter transition
+    document.body.classList.remove('page-transition-exit');
+  }, 500); // Adjust this timing to match your CSS transition duration
+}
+
 
