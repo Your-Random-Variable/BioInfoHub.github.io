@@ -521,3 +521,23 @@ a {
 a:hover {
   color: #ff9900;
 } 
+
+.footer-container {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-social {
+  margin-bottom: 10px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
