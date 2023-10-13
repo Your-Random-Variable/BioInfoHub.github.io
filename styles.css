@@ -145,7 +145,7 @@ main {
 .fab {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 70px;
   background-color: #ff9900;
   color: #fff;
   padding: 10px 20px;
@@ -173,6 +173,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .footer-social a {
@@ -233,11 +234,14 @@ footer {
   margin: 0 auto;
   max-width: 800px;
   padding: 20px;
+  position: absolute; /* Set the position of the contact container to absolute */
+  left: 50%; /* Push the contact container slightly to the right */
+  transform: translateX(-50%);
 }
 
-.contact-info {
-  text-align: left;
-  margin-bottom: 20px;
+.contact-info p {
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 .contact-info p {
@@ -254,11 +258,14 @@ footer {
 .projects-container {
   text-align: center;
   padding: 20px;
+  clear: both;
 }
 
 .section-heading {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: center;
+  clear: both;
 }
 
 .section-content {
