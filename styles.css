@@ -234,7 +234,7 @@ footer {
   margin: 0 auto;
   max-width: 800px;
   padding: 20px;
-  position: absolute; /* Set the position of the contact container to absolute */
+  position: relative; /* Set the position of the contact container to absolute */
   left: 50%; /* Push the contact container slightly to the right */
   transform: translateX(-50%);
 }
