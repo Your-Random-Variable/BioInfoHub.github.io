@@ -30,45 +30,53 @@ function showSection(sectionId) {
     fetchNews();
   }
 }
-function fetchNews() {
+async function fetchNews() {
   const newsContainer = document.getElementById('news-container');
   newsContainer.innerHTML = 'Loading news...';
 
   const parser = new RSSParser();
-  const feedUrl = 'http://bioinformaticsreview.com/feed/rss.xml'; // Replace with the URL of your RSS feed
+  const feedUrl = 'https://bioinformaticsreview.com/feed/'; // Updated feed URL
 
-  parser.parseURL(feedUrl)
-    .then(feed => {
-      let html = '';
+  try {
+    const feed = await parser.parseURL(feedUrl);
+    let html = '';
 
-      feed.items.forEach(item => {
-        const title = item.title;
-        const link = item.link;
-        const pubDate = new Date(item.pubDate).toLocaleDateString();
-        const description = item.contentSnippet;
-        const image = item.enclosure && item.enclosure.url;
+    feed.items.forEach(item => {
+      const title = item.title || '';
+      const link = item.link || '';
+      const pubDate = item.pubDate ? new Date(item.pubDate).toLocaleDateString() : '';
+      // Use description field extracted properly
+      const description = item.content || item.description || '';
+      // For image, attempt to get from media:content or parse description for img if available
+      let image = '';
+      if (item.enclosure && item.enclosure.url) {
+        image = item.enclosure.url;
+      } else {
+        // Try regex to extract first img src from description
+        const imgMatch = description.match(/<img[^>]+src="([^">]+)"/);
+        if (imgMatch && imgMatch[1]) {
+          image = imgMatch[1];
+        }
+      }
 
-        html += `
-          <div class="news-item">
-            <div class="news-image">
-              <img src="${image}" alt="${title}">
-            </div>
-            <div class="news-content">
-              <h3 class="news-title"><a href="${link}">${title}</a></h3>
-              <p class="news-description">${description}</p>
-              <p class="news-pubdate">${pubDate}</p>
-              <p class="news-source">Source: UN Website</p> <!-- Added line for source -->
-            </div>
+      html += `
+        <div class="news-item">
+          ${image ? `<div class="news-image"><img src="${image}" alt="${title}"></div>` : ''}
+          <div class="news-content">
+            <h3 class="news-title"><a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
+            <p class="news-description">${description.replace(/<[^>]+>/g, '').substring(0, 200)}...</p>
+            <p class="news-pubdate">${pubDate}</p>
+            <p class="news-source">Source: Bioinformatics Review</p>
           </div>
-        `;
-      });
-
-      newsContainer.innerHTML = html;
-    })
-    .catch(error => {
-      console.error('Error fetching news:', error);
-      newsContainer.innerHTML = 'Failed to fetch news.';
+        </div>
+      `;
     });
+
+    newsContainer.innerHTML = html;
+  } catch (error) {
+    console.error('Error fetching news:', error);
+    newsContainer.innerHTML = 'Failed to fetch news.';
+  }
 }
 function toggleBlogDetails(button) {
   const blogPost = button.closest('.blog-post');
@@ -79,4 +87,5 @@ function toggleBlogDetails(button) {
   blogImage.classList.toggle('expanded');
   button.textContent = blogDetails.classList.contains('hidden') ? 'Read More' : 'Read Less';
 }
+
 
