@@ -35,28 +35,29 @@ async function fetchNews() {
   newsContainer.innerHTML = 'Loading news...';
 
   const parser = new RSSParser();
-  const feedUrl = 'https://bioinformaticsreview.com/feed/'; // Updated feed URL
+  const proxyUrl = 'https://api.allorigins.win/get?url=';
+  const feedUrl = 'https://bioinformaticsreview.com/feed/';
 
   try {
-    const feed = await parser.parseURL(feedUrl);
-    let html = '';
+    const response = await fetch(proxyUrl + encodeURIComponent(feedUrl));
+    if (!response.ok) throw new Error('Network response was not ok');
 
+    const data = await response.json();
+    const feed = await parser.parseString(data.contents);
+
+    let html = '';
     feed.items.forEach(item => {
       const title = item.title || '';
       const link = item.link || '';
       const pubDate = item.pubDate ? new Date(item.pubDate).toLocaleDateString() : '';
-      // Use description field extracted properly
       const description = item.content || item.description || '';
-      // For image, attempt to get from media:content or parse description for img if available
       let image = '';
+
       if (item.enclosure && item.enclosure.url) {
         image = item.enclosure.url;
       } else {
-        // Try regex to extract first img src from description
         const imgMatch = description.match(/<img[^>]+src="([^">]+)"/);
-        if (imgMatch && imgMatch[1]) {
-          image = imgMatch[1];
-        }
+        if (imgMatch && imgMatch[1]) image = imgMatch[1];
       }
 
       html += `
@@ -87,5 +88,6 @@ function toggleBlogDetails(button) {
   blogImage.classList.toggle('expanded');
   button.textContent = blogDetails.classList.contains('hidden') ? 'Read More' : 'Read Less';
 }
+
 
 
