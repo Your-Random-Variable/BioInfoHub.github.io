@@ -35,7 +35,7 @@ function fetchNews() {
   newsContainer.innerHTML = 'Loading news...';
 
   const parser = new RSSParser();
-  const feedUrl = 'https://news.un.org/feed/subscribe/en/news/topic/health/feed/rss.xml'; // Replace with the URL of your RSS feed
+  const feedUrl = 'http://bioinformaticsreview.com/feed/rss.xml'; // Replace with the URL of your RSS feed
 
   parser.parseURL(feedUrl)
     .then(feed => {
@@ -79,3 +79,4 @@ function toggleBlogDetails(button) {
   blogImage.classList.toggle('expanded');
   button.textContent = blogDetails.classList.contains('hidden') ? 'Read More' : 'Read Less';
 }
+
